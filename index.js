@@ -1,13 +1,48 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // The algorithm:
+  for(let i = 0; i < array.length; i++){
+    const endArray =target - array[i];
+    for(let j = i + 1; j < array.length; j++){
+    if(array[j] === endArray)      
+    return true
+    }
+  }
+  return false
 }
+hasTargetSum([2, 3, 6, 7, 8], 10)
 
 /* 
-  Write the Big O time complexity of your function here
+  The Big O time complexity of the function:
+  function hasTargetSum(array, target) {
+  for(let i = 0; i < array.length; i++){
+    > n steps(depending on the length of array)
+    const endArray =target - array[i];
+    for(let j = i + 1; j < array.length; j++){
+     > nested loop witch means n*n 
+    if(array[j] === endArray)      
+    return true
+    }
+  }
+  first step
+  return false
+}
 */
 
 /* 
-  Add your pseudocode here
+ pseudocode here:
+
+ Make a function that recives two arguments,
+ one Array of integers and one target integer.
+ This function should take each number in the 
+ Array and add them together. If any numbers added
+ together make the target integer it returns true, if not 
+ it returns false.
+
+ create a function with two arguments 1 Array of integers and 1 target integer.
+  add each number together until it reaches the target integer.
+    If it reaches the target integer, return true.
+      If not return false.
+
 */
 
 /*
